@@ -639,10 +639,15 @@ html.reveal-enabled .reveal-item.is-visible {
   .project-card-grid .project-node-copy strong { font-size: clamp(2.25rem, 11vw, 3.25rem); }
   .project-card-grid .project-node-slide.is-active > img { animation: none; transform: scale(1.025); }
   .tools-marquee { width: 100%; }
+  .skills .container { width: min(100% - 40px, 620px); }
   .skills .section-heading-row { margin-bottom: 38px; }
-  .skills-core { max-width: none; margin-top: 28px; }
+  .skills-heading-title,
+  .skills-core { width: 100%; min-width: 0; max-width: none; }
+  .skills-heading-title h2 { max-width: 100%; font-size: clamp(3.45rem, 16vw, 5.15rem); line-height: .84; overflow-wrap: normal; word-break: normal; }
+  .skills-heading .eyebrow { margin-bottom: 22px; }
+  .skills-core { margin-top: 28px; }
   .core-skills-list { gap: 8px; }
-  .core-skills-list li { padding: 8px 12px; font-size: .66rem; white-space: normal; }
+  .core-skills-list li { max-width: 100%; padding: 8px 12px; font-size: .66rem; overflow-wrap: anywhere; white-space: normal; }
   .primary-automation-stack { margin-bottom: 46px; }
   .primary-stack-showcase { grid-template-columns: 1fr; }
   .primary-tool-item { min-height: 250px; padding: 26px 20px; }
