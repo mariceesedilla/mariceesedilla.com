@@ -628,7 +628,7 @@ html.reveal-enabled .reveal-item.is-visible {
   .hero-orb { top: 44%; right: -35vw; width: 80vw; }
   .section-heading-row { display: block; margin-bottom: 48px; }
   .section-heading-row > p { margin-top: 24px; }
-  .section-heading h2 { font-size: clamp(3.2rem, 15vw, 5rem); }
+  .section-heading:not(.skills-heading) h2 { font-size: clamp(3.2rem, 15vw, 5rem); }
   .projects { padding: 100px 0; }
   .projects .section-heading-row { margin-bottom: 58px; }
   .services { padding: 56px 0; }
@@ -642,10 +642,10 @@ html.reveal-enabled .reveal-item.is-visible {
   .project-card-grid .project-node-slide.is-active > img { animation: none; transform: scale(1.025); }
   .tools-marquee { width: 100%; }
   .skills .container { width: min(100% - 40px, 620px); }
-  .skills .section-heading-row { margin-bottom: 38px; }
+  .skills .section-heading-row { display: block; margin-bottom: 38px; }
   .skills-heading-title,
   .skills-core { width: 100%; min-width: 0; max-width: none; }
-  .skills-heading-title h2 { width: 100%; max-width: 100%; font-size: clamp(2.75rem, 12.8vw, 4.7rem); line-height: .84; overflow-wrap: normal; word-break: normal; }
+  .skills .skills-heading #skills-title { width: 100%; max-width: 100%; font-size: clamp(2.75rem, 12.8vw, 4.7rem); line-height: .84; overflow-wrap: normal; word-break: normal; }
   .skills-heading-title h2 span { max-width: 100%; }
   .skills-heading .eyebrow { margin-bottom: 22px; }
   .skills-core { margin-top: 28px; }
