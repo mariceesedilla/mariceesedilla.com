@@ -485,11 +485,13 @@ button { color: inherit; font: inherit; }
 .skills { overflow: hidden; border-top: 1px solid var(--border); background: radial-gradient(circle at 17% 22%, rgba(214, 174, 85, .045), transparent 31%), rgba(7, 7, 6, .94); }
 .skills-heading { align-items: flex-start; }
 .skills .section-heading-row { margin-bottom: 54px; }
-.skills-heading-title { flex: 0 1 440px; }
+.skills-heading-title { min-width: 0; flex: 0 1 520px; }
+.skills-heading-title h2 { max-width: 100%; font-size: clamp(3.4rem, 5.6vw, 5.45rem); }
+.skills-heading-title h2 span { display: block; }
 .skills-core { flex: 1 1 590px; max-width: 620px; }
 .core-skills-label { margin: 0 0 14px; color: var(--rose); font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .core-skills-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
-.core-skills-list li { padding: 9px 13px; border: 1px solid var(--border); border-radius: 999px; background: var(--bg-soft); color: var(--text); font-size: .68rem; font-weight: 500; line-height: 1.35; white-space: nowrap; transition: border-color .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease; }
+.core-skills-list li { padding: 10px 15px; border: 1px solid var(--border); border-radius: 999px; background: var(--bg-soft); color: var(--text); font-size: .75rem; font-weight: 500; line-height: 1.35; white-space: nowrap; transition: border-color .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease; }
 .core-skills-list li:hover { border-color: rgba(232, 200, 117, .62); background: rgba(214, 174, 85, .1); color: var(--rose); box-shadow: 0 0 20px rgba(214, 174, 85, .1); }
 .skills-subheading { margin: 0 0 18px; color: var(--rose); font-size: .66rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
 .primary-automation-stack { margin-bottom: 58px; }
@@ -643,11 +645,11 @@ html.reveal-enabled .reveal-item.is-visible {
   .skills .section-heading-row { margin-bottom: 38px; }
   .skills-heading-title,
   .skills-core { width: 100%; min-width: 0; max-width: none; }
-  .skills-heading-title h2 { max-width: 100%; font-size: clamp(3.45rem, 16vw, 5.15rem); line-height: .84; overflow-wrap: normal; word-break: normal; }
+  .skills-heading-title h2 { max-width: 100%; font-size: clamp(2.95rem, 13.25vw, 4.7rem); line-height: .84; overflow-wrap: normal; word-break: normal; }
   .skills-heading .eyebrow { margin-bottom: 22px; }
   .skills-core { margin-top: 28px; }
   .core-skills-list { gap: 8px; }
-  .core-skills-list li { max-width: 100%; padding: 8px 12px; font-size: .66rem; overflow-wrap: anywhere; white-space: normal; }
+  .core-skills-list li { max-width: 100%; padding: 9px 13px; font-size: .72rem; overflow-wrap: anywhere; white-space: normal; }
   .primary-automation-stack { margin-bottom: 46px; }
   .primary-stack-showcase { grid-template-columns: 1fr; }
   .primary-tool-item { min-height: 250px; padding: 26px 20px; }
