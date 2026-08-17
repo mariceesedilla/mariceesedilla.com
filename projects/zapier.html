@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zapier workflow automation projects by Maricee Sedilla, including Asana CRM and lead enrichment systems.">
+  <meta name="description" content="Three Zapier automation projects by Maricee Sedilla covering AI content publishing, CRM follow-up, and lead qualification.">
   <meta name="theme-color" content="#0D0D0F">
-  <title>Zapier Automation — Maricee Sedilla</title>
+  <title>Zapier Automation Projects — Maricee Sedilla</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="project.css">
-  <link rel="stylesheet" href="hub-projects.css">
+  <link rel="stylesheet" href="zapier-projects.css">
+  <script src="project.js" defer></script>
+  <script src="zapier-projects.js" defer></script>
 </head>
-<body class="project-page hub-detail-page">
+<body class="project-page zapier-project-page">
   <a class="skip-link" href="#project-content">Skip to project content</a>
 
   <header class="project-header">
@@ -24,46 +26,148 @@
   </header>
 
   <main id="project-content">
-    <section class="project-hero">
-      <div class="project-glow" aria-hidden="true"></div>
-      <div class="container project-hero-inner">
-        <p class="eyebrow"><span>Zapier / Workflow Automation</span></p>
-        <h1>Zapier<br><span>Automation</span></h1>
-        <p class="project-lead hub-detail-intro">A growing collection of connected automation systems designed to organize lead data, reduce repetitive work, and support timely personalized communication.</p>
-        <a class="scroll-cue" href="#automation-projects">Explore the projects <span aria-hidden="true">↓</span></a>
-      </div>
-    </section>
-
-    <section class="project-section" id="automation-projects" aria-labelledby="automation-projects-title">
+    <section class="zapier-selector-section" aria-labelledby="zapier-selector-title">
       <div class="container">
-        <div class="project-section-heading heading-row">
-          <div><p class="section-index">01 / Selected Automations</p><h2 id="automation-projects-title">CONNECTED<br>WORKFLOWS.</h2></div>
-          <p>Practical automation concepts built around cleaner CRM operations, enriched lead data, and relevant follow-up.</p>
+        <div class="zapier-selector-heading">
+          <p class="eyebrow"><span>Zapier Automation Portfolio</span></p>
+          <h1 id="zapier-selector-title">SELECT AN AUTOMATION.</h1>
         </div>
 
-        <div class="hub-detail-grid">
-          <article class="hub-detail-card automation-detail-card">
-            <div class="automation-detail-visual" aria-label="Asana CRM automation workflow preview">
-              <div class="automation-detail-brand"><img src="../assets/icons/zapier-wordmark-dark.png" alt="Zapier"><span>Workflow Preview</span></div>
-              <div class="automation-detail-flow" aria-hidden="true"><span>Lead Captured</span><i></i><span>Format Record</span><i></i><span>Asana CRM</span></div>
-            </div>
-            <div class="hub-detail-copy"><span>CRM Automation</span><h2>Asana CRM Automation</h2><p>A structured workflow concept for capturing, formatting, and routing lead information into an organized Asana CRM process.</p></div>
-          </article>
+        <div class="zapier-project-selector" aria-label="Choose a Zapier automation project">
+          <button class="zapier-selector-card is-selected" type="button" data-zapier-project-target="ai-content" aria-controls="ai-content-project" aria-pressed="true">
+            <span class="zapier-selector-number">01</span>
+            <span class="zapier-selector-category">Zapier / AI Content Automation</span>
+            <strong>AI Content Creation &amp; Social Media Publishing Automation</strong>
+            <small>AI Content • Repurposing • Publishing • Workflow Automation</small>
+            <b>View Project <i aria-hidden="true">→</i></b>
+          </button>
 
-          <article class="hub-detail-card automation-detail-card">
-            <div class="automation-detail-visual" aria-label="Lead enrichment and personalized email workflow preview">
-              <div class="automation-detail-brand"><img src="../assets/icons/zapier-wordmark-dark.png" alt="Zapier"><span>Workflow Preview</span></div>
-              <div class="automation-detail-flow" aria-hidden="true"><span>New Lead</span><i></i><span>Enrich Data</span><i></i><span>Personalized Email</span></div>
-            </div>
-            <div class="hub-detail-copy"><span>Lead Operations</span><h2>Lead Enrichment + Personalized Email</h2><p>An automation concept that enriches incoming lead records and prepares timely, more relevant email communication.</p></div>
-          </article>
+          <button class="zapier-selector-card" type="button" data-zapier-project-target="lead-management" aria-controls="lead-management-project" aria-pressed="false">
+            <span class="zapier-selector-number">02</span>
+            <span class="zapier-selector-category">Zapier / CRM Automation</span>
+            <strong>Automated Lead Management &amp; Follow-Up System</strong>
+            <small>Lead Management • CRM • Follow-Up • Asana</small>
+            <b>View Project <i aria-hidden="true">→</i></b>
+          </button>
+
+          <button class="zapier-selector-card" type="button" data-zapier-project-target="lead-qualification" aria-controls="lead-qualification-project" aria-pressed="false">
+            <span class="zapier-selector-number">03</span>
+            <span class="zapier-selector-category">Zapier / Lead Automation</span>
+            <strong>Automated Lead Qualification &amp; Sales Prioritization System</strong>
+            <small>Lead Qualification • Data Enrichment • Database • Outreach</small>
+            <b>View Project <i aria-hidden="true">→</i></b>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="project-return"><div class="container"><p>Looking for a connected workflow?</p><a href="../index.html#projects">Back to Portfolio <span aria-hidden="true">↗</span></a></div></section>
+    <div class="zapier-project-panel is-active" id="ai-content-project" data-zapier-project-panel="ai-content">
+      <section class="project-hero">
+        <div class="project-glow" aria-hidden="true"></div>
+        <div class="container project-hero-inner">
+          <p class="eyebrow"><span>Zapier / AI Content Automation</span></p>
+          <h1>AI Content Creation<br><span>&amp; Social Publishing</span></h1>
+          <p class="project-lead">An AI-assisted content automation system designed to create, repurpose, and prepare content for social media publishing while reducing repetitive manual work.</p>
+          <a class="scroll-cue" href="#ai-content-overview">Explore the project <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="project-section project-overview" id="ai-content-overview" aria-labelledby="ai-content-overview-title">
+        <div class="container overview-grid">
+          <div class="project-section-heading"><p class="section-index">01 / Project Overview</p><h2 id="ai-content-overview-title">CONTENT,<br>AUTOMATED.</h2></div>
+          <div class="overview-copy"><p>The system connects AI-assisted content creation with a repeatable publishing workflow so one source idea can be prepared for multiple social channels.</p><ul class="overview-list"><li>AI-assisted content generation</li><li>Content repurposing</li><li>Publishing preparation</li><li>Reduced repetitive work</li></ul></div>
+        </div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="ai-workflow-title">
+        <div class="container">
+          <div class="project-section-heading heading-row"><div><p class="section-index">02 / Workflow / Automation System</p><h2 id="ai-workflow-title">ONE CONNECTED<br>CONTENT FLOW.</h2></div><p>The automation coordinates the steps required to generate, prepare, and route content toward social publishing.</p></div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/Zapier/AI Content Creation &amp; Social Media Publishing Automation/workflow-overview.png" data-lightbox-alt="AI content creation and social media publishing workflow overview" data-lightbox-caption="AI Content Creation — Workflow Overview" aria-label="Open AI content workflow screenshot in a larger view"><img src="../Image/Zapier/AI Content Creation &amp; Social Media Publishing Automation/workflow-overview.png" alt="AI content creation and social media publishing workflow overview" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>02</span> Workflow / Automation System</figcaption></figure></div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="ai-history-title">
+        <div class="container">
+          <div class="project-section-heading heading-row"><div><p class="section-index">03 / Automation History / Execution</p><h2 id="ai-history-title">WORKFLOW<br>IN ACTION.</h2></div><p>Execution history provides a clear record of automation runs and supports practical monitoring and troubleshooting.</p></div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/Zapier/AI Content Creation &amp; Social Media Publishing Automation/automation-history.png" data-lightbox-alt="AI content automation execution history" data-lightbox-caption="AI Content Creation — Automation History" aria-label="Open automation history screenshot in a larger view"><img src="../Image/Zapier/AI Content Creation &amp; Social Media Publishing Automation/automation-history.png" alt="AI content automation execution history" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>03</span> Automation History / Execution</figcaption></figure></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="zapier-project-panel" id="lead-management-project" data-zapier-project-panel="lead-management" hidden>
+      <section class="project-hero">
+        <div class="project-glow" aria-hidden="true"></div>
+        <div class="container project-hero-inner">
+          <p class="eyebrow"><span>Zapier / CRM Automation</span></p>
+          <h1>Automated Lead<br><span>Management &amp; Follow-Up</span></h1>
+          <p class="project-lead">An automated lead management system using Zapier and Asana to organize leads, manage pipeline stages, trigger follow-up actions, and support consistent sales workflows.</p>
+          <a class="scroll-cue" href="#lead-management-overview">Explore the project <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="project-section project-overview" id="lead-management-overview" aria-labelledby="lead-management-overview-title">
+        <div class="container overview-grid">
+          <div class="project-section-heading"><p class="section-index">01 / Project Overview</p><h2 id="lead-management-overview-title">LEADS,<br>ORGANIZED.</h2></div>
+          <div class="overview-copy"><p>The system connects Zapier and Asana so lead information, pipeline stages, and follow-up tasks can move through one reliable sales workflow.</p><ul class="overview-list"><li>Lead capture and organization</li><li>Asana-based CRM stages</li><li>Automated follow-up actions</li><li>Consistent sales operations</li></ul></div>
+        </div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="asana-crm-title">
+        <div class="container"><div class="project-section-heading heading-row"><div><p class="section-index">02 / Asana CRM</p><h2 id="asana-crm-title">A PRACTICAL<br>SALES WORKSPACE.</h2></div><p>Asana provides a structured CRM view for tracking leads, assignments, stages, and next actions.</p></div><div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/Zapier/Automated Lead Management &amp; Follow-Up System/asana.png" data-lightbox-alt="Asana CRM workspace screenshot" data-lightbox-caption="Automated Lead Management — Asana CRM" aria-label="Open Asana CRM screenshot in a larger view"><img src="../Image/Zapier/Automated Lead Management &amp; Follow-Up System/asana.png" alt="Asana CRM workspace screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>02</span> Asana CRM</figcaption></figure></div></div>
+      </section>
+
+      <section class="project-section" aria-labelledby="sales-crm-title">
+        <div class="container"><div class="project-section-heading heading-row"><div><p class="section-index">03 / Automated Lead Management</p><h2 id="sales-crm-title">PIPELINE ACTIONS,<br>CONNECTED.</h2></div><p>Zapier supports movement and updates across the lead workflow while keeping the sales process organized.</p></div><div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/Zapier/Automated Lead Management &amp; Follow-Up System/sales-crm.png" data-lightbox-alt="Automated sales CRM workflow screenshot" data-lightbox-caption="Automated Lead Management — Sales CRM" aria-label="Open automated sales CRM screenshot in a larger view"><img src="../Image/Zapier/Automated Lead Management &amp; Follow-Up System/sales-crm.png" alt="Automated sales CRM workflow screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>03</span> Automated Lead Management</figcaption></figure></div></div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="follow-up-title">
+        <div class="container overview-grid"><div class="project-section-heading"><p class="section-index">04 / Follow-Up System</p><h2 id="follow-up-title">CONSISTENT<br>NEXT ACTIONS.</h2></div><div class="overview-copy"><p>Follow-up tasks are connected to lead stages so sales activity stays timely and visible without relying on repetitive manual updates.</p><ul class="overview-list"><li>Stage-based next actions</li><li>Organized ownership</li><li>Consistent follow-up timing</li><li>Clear pipeline visibility</li></ul></div></div>
+      </section>
+    </div>
+
+    <div class="zapier-project-panel" id="lead-qualification-project" data-zapier-project-panel="lead-qualification" hidden>
+      <section class="project-hero">
+        <div class="project-glow" aria-hidden="true"></div>
+        <div class="container project-hero-inner">
+          <p class="eyebrow"><span>Zapier / Lead Automation</span></p>
+          <h1>Lead Qualification<br><span>&amp; Sales Prioritization</span></h1>
+          <p class="project-lead">An automated lead qualification and prioritization system that processes lead information, enriches data, stores structured records, and supports personalized sales outreach.</p>
+          <a class="scroll-cue" href="#lead-qualification-overview">Explore the project <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="project-section project-overview" id="lead-qualification-overview" aria-labelledby="lead-qualification-overview-title">
+        <div class="container overview-grid"><div class="project-section-heading"><p class="section-index">01 / Project Overview</p><h2 id="lead-qualification-overview-title">BETTER DATA.<br>BETTER PRIORITIES.</h2></div><div class="overview-copy"><p>The automation processes incoming lead information, enriches and stores structured records, then supports prioritization and more relevant outreach.</p><ul class="overview-list"><li>Lead qualification</li><li>Data enrichment</li><li>Structured database storage</li><li>Sales prioritization and outreach</li></ul></div></div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="qualification-workflow-title">
+        <div class="container"><div class="project-section-heading heading-row"><div><p class="section-index">02 / Lead Qualification Workflow</p><h2 id="qualification-workflow-title">QUALIFY LEADS<br>AUTOMATICALLY.</h2></div><p>The workflow evaluates incoming information and prepares each lead for structured storage and prioritization.</p></div><div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/Zapier/Automated Lead Qualification &amp; Sales Prioritization System/workflow-overview.png" data-lightbox-alt="Automated lead qualification and sales prioritization workflow" data-lightbox-caption="Lead Qualification — Workflow Overview" aria-label="Open lead qualification workflow screenshot in a larger view"><img src="../Image/Zapier/Automated Lead Qualification &amp; Sales Prioritization System/workflow-overview.png" alt="Automated lead qualification and sales prioritization workflow" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>02</span> Lead Qualification Workflow</figcaption></figure></div></div>
+      </section>
+
+      <section class="project-section" aria-labelledby="lead-database-title">
+        <div class="container"><div class="project-section-heading heading-row"><div><p class="section-index">03 / Data / Database</p><h2 id="lead-database-title">STRUCTURED DATA<br>IN NEON SQL.</h2></div><p>Qualified lead records are stored in a structured Neon SQL database for reliable access and downstream sales actions.</p></div><div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/Zapier/Automated Lead Qualification &amp; Sales Prioritization System/neon-sql.png" data-lightbox-alt="Neon SQL lead database screenshot" data-lightbox-caption="Lead Qualification — Neon SQL Database" aria-label="Open Neon SQL database screenshot in a larger view"><img src="../Image/Zapier/Automated Lead Qualification &amp; Sales Prioritization System/neon-sql.png" alt="Neon SQL lead database screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>03</span> Data / Database — Neon SQL</figcaption></figure></div></div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="sales-prioritization-title">
+        <div class="container overview-grid"><div class="project-section-heading"><p class="section-index">04 / Sales Prioritization</p><h2 id="sales-prioritization-title">FOCUS ON THE<br>RIGHT LEADS.</h2></div><div class="overview-copy"><p>Enriched and structured lead information supports clearer prioritization so sales attention can be directed toward stronger opportunities.</p><ul class="overview-list"><li>Consistent qualification criteria</li><li>Enriched lead context</li><li>Structured priority records</li><li>Actionable sales focus</li></ul></div></div>
+      </section>
+
+      <section class="project-section" aria-labelledby="personalized-outreach-title">
+        <div class="container overview-grid"><div class="project-section-heading"><p class="section-index">05 / Personalized Outreach</p><h2 id="personalized-outreach-title">MORE RELEVANT<br>FOLLOW-UP.</h2></div><div class="overview-copy"><p>Qualified lead data can support personalized sales messaging that reflects each prospect’s available information and priority level.</p><ul class="overview-list"><li>Lead-specific context</li><li>Personalized messaging inputs</li><li>Priority-aware outreach</li><li>Repeatable sales workflow</li></ul></div></div>
+      </section>
+    </div>
+
+    <section class="project-return"><div class="container"><p>Looking for a connected automation system?</p><a href="../index.html#projects">Back to Portfolio <span aria-hidden="true">↗</span></a></div></section>
   </main>
 
-  <footer class="project-footer"><div class="container"><span>Zapier Automation</span><span>CRM / Enrichment / Email</span></div></footer>
+  <footer class="project-footer"><div class="container"><span>Zapier Automation Portfolio</span><span>AI Content / CRM / Lead Qualification</span></div></footer>
+
+  <dialog class="lightbox" aria-label="Expanded Zapier project screenshot">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" type="button" aria-label="Close expanded screenshot">Close <span aria-hidden="true">×</span></button>
+      <img class="lightbox-image" src="" alt="">
+      <p class="lightbox-caption" aria-live="polite"></p>
+    </div>
+  </dialog>
 </body>
 </html>

@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Glow Haven Spa & Salon — a GoHighLevel CRM automation and customer journey portfolio project by Maricee Sedilla.">
+  <meta name="description" content="GoHighLevel CRM and automation projects by Maricee Sedilla, featuring Glow Haven Spa & Salon and MotionCare Physiotherapy Clinic.">
   <meta name="theme-color" content="#0D0D0F">
-  <title>Glow Haven Spa & Salon — Maricee Sedilla</title>
+  <title>GoHighLevel Projects — Maricee Sedilla</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="ghl-projects.css">
   <script src="project.js" defer></script>
+  <script src="ghl-projects.js" defer></script>
 </head>
 <body class="project-page">
   <a class="skip-link" href="#project-content">Skip to project content</a>
@@ -24,13 +26,42 @@
   </header>
 
   <main id="project-content">
+    <section class="ghl-selector-section" aria-labelledby="ghl-selector-title">
+      <div class="container">
+        <div class="ghl-selector-heading">
+          <p class="eyebrow"><span>GoHighLevel Project Portfolio</span></p>
+          <h1 id="ghl-selector-title">SELECT A PROJECT.</h1>
+        </div>
+        <div class="ghl-project-selector" aria-label="Choose a GoHighLevel project">
+          <button class="ghl-selector-card is-selected" type="button" data-ghl-project-target="glow-haven" aria-controls="glow-haven-project" aria-pressed="true">
+            <span class="ghl-selector-number">01</span>
+            <span class="ghl-selector-category">GoHighLevel CRM &amp; Automation</span>
+            <strong>Glow Haven<br>Spa &amp; Salon</strong>
+            <small>CRM • Booking • Workflows • Reviews • Rebooking</small>
+            <b>View Project <i aria-hidden="true">→</i></b>
+          </button>
+          <button class="ghl-selector-card" type="button" data-ghl-project-target="motioncare" aria-controls="motioncare-project" aria-pressed="false">
+            <span class="ghl-selector-number">02</span>
+            <span class="ghl-selector-category">GoHighLevel CRM &amp; Automation</span>
+            <strong>MotionCare<br>Physiotherapy Clinic</strong>
+            <small>CRM • Appointment Automation • Reminders • No-Show Recovery • Reviews</small>
+            <b>View Project <i aria-hidden="true">→</i></b>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ghl-project-panel is-active" id="glow-haven-project" data-ghl-project-panel="glow-haven">
     <section class="project-hero">
       <div class="project-glow" aria-hidden="true"></div>
       <div class="container project-hero-inner">
         <p class="eyebrow"><span>GoHighLevel / CRM Automation</span></p>
         <h1>Glow Haven<br><span>Spa & Salon</span></h1>
         <p class="project-lead">A sample GoHighLevel customer journey system featuring lead capture, appointment booking, automated email reminders, CRM pipeline management, review requests, rebooking follow-ups, and long-term nurture workflows.</p>
-        <a class="scroll-cue" href="#overview">Explore the project <span aria-hidden="true">↓</span></a>
+        <div class="project-hero-actions">
+          <a class="button button-primary" href="https://drive.google.com/file/d/1BEkgUocpaFqg0GrDTWSdNxrob_qtw77V/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Watch the Glow Haven project walkthrough in a new tab">Watch Walkthrough <span aria-hidden="true">▶</span></a>
+          <a class="scroll-cue" href="#overview">Explore the project <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
     </section>
 
@@ -184,6 +215,94 @@
         </div>
       </div>
     </section>
+    </div>
+
+    <div class="ghl-project-panel" id="motioncare-project" data-ghl-project-panel="motioncare" hidden>
+      <section class="project-hero motioncare-hero">
+        <div class="project-glow" aria-hidden="true"></div>
+        <div class="container project-hero-inner">
+          <p class="eyebrow"><span>GoHighLevel CRM &amp; Automation</span></p>
+          <h1>MotionCare<br><span>Physiotherapy Clinic</span></h1>
+          <p class="project-lead">A clinic automation system designed to manage inquiries, appointments, reminders, no-shows, post-appointment follow-ups, reviews, and rebooking.</p>
+          <a class="scroll-cue" href="#motioncare-overview">Explore the project <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="project-section" id="motioncare-overview" aria-labelledby="motioncare-overview-title">
+        <div class="container">
+          <div class="project-section-heading heading-row">
+            <div><p class="section-index">01 / Project Overview</p><h2 id="motioncare-overview-title">A CONNECTED<br>CLINIC JOURNEY.</h2></div>
+            <p>The MotionCare system brings inquiries, bookings, reminders, recovery, and follow-up into one organized clinic workflow.</p>
+          </div>
+          <div class="project-gallery project-gallery-single">
+            <figure class="gallery-card">
+              <button class="gallery-trigger" type="button" data-lightbox-src="../Image/MotionCare/landing-page.png" data-lightbox-alt="MotionCare Physiotherapy Clinic landing page screenshot" data-lightbox-caption="MotionCare Project Overview — Landing Page" aria-label="Open MotionCare landing page screenshot in a larger view"><img src="../Image/MotionCare/landing-page.png" alt="MotionCare Physiotherapy Clinic landing page screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button>
+              <figcaption><span>01</span> Project Overview — Landing Page</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="motioncare-pipeline-title">
+        <div class="container">
+          <div class="project-section-heading heading-row">
+            <div><p class="section-index">02 / CRM Pipeline</p><h2 id="motioncare-pipeline-title">PATIENT INQUIRIES,<br>ORGANIZED.</h2></div>
+            <p>A focused CRM pipeline keeps each inquiry visible as it progresses from first contact to booked appointment and follow-up.</p>
+          </div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/MotionCare/crm-pipeline.png" data-lightbox-alt="MotionCare CRM pipeline screenshot" data-lightbox-caption="MotionCare CRM Pipeline" aria-label="Open MotionCare CRM pipeline screenshot in a larger view"><img src="../Image/MotionCare/crm-pipeline.png" alt="MotionCare CRM pipeline screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>02</span> CRM Pipeline</figcaption></figure></div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="motioncare-workflow-list-title">
+        <div class="container">
+          <div class="project-section-heading heading-row">
+            <div><p class="section-index">03 / Workflow Overview</p><h2 id="motioncare-workflow-list-title">ONE CLINIC<br>AUTOMATION SYSTEM.</h2></div>
+            <p>Connected workflows support MotionCare from the first inquiry through appointment communication, recovery, reviews, and rebooking.</p>
+          </div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/MotionCare/workflow-list.png" data-lightbox-alt="MotionCare workflow list screenshot" data-lightbox-caption="MotionCare Workflow Overview" aria-label="Open MotionCare workflow overview screenshot in a larger view"><img src="../Image/MotionCare/workflow-list.png" alt="MotionCare workflow list screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>03</span> Workflow Overview</figcaption></figure></div>
+        </div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="motioncare-inquiry-title">
+        <div class="container">
+          <div class="project-section-heading heading-row">
+            <div><p class="section-index">04 / New Inquiry Automation</p><h2 id="motioncare-inquiry-title">RESPOND FROM<br>FIRST CONTACT.</h2></div>
+            <p>New inquiries enter an organized workflow so patient details can be captured and followed up consistently.</p>
+          </div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/MotionCare/new-inquiry.png" data-lightbox-alt="MotionCare new inquiry automation screenshot" data-lightbox-caption="MotionCare New Inquiry Automation" aria-label="Open MotionCare new inquiry automation screenshot in a larger view"><img src="../Image/MotionCare/new-inquiry.png" alt="MotionCare new inquiry automation screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>04</span> New Inquiry Automation</figcaption></figure></div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="motioncare-booked-title">
+        <div class="container">
+          <div class="project-section-heading heading-row">
+            <div><p class="section-index">05 / Appointment Booked &amp; Reminders</p><h2 id="motioncare-booked-title">KEEP APPOINTMENTS<br>ON TRACK.</h2></div>
+            <p>Booking confirmations and reminders keep patients informed before their scheduled physiotherapy appointment.</p>
+          </div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/MotionCare/appointment-booked.png" data-lightbox-alt="MotionCare appointment booked and reminders automation screenshot" data-lightbox-caption="MotionCare Appointment Booked and Reminders" aria-label="Open MotionCare appointment reminders screenshot in a larger view"><img src="../Image/MotionCare/appointment-booked.png" alt="MotionCare appointment booked and reminders automation screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>05</span> Appointment Booked &amp; Reminders</figcaption></figure></div>
+        </div>
+      </section>
+
+      <section class="project-section section-alt" aria-labelledby="motioncare-no-show-title">
+        <div class="container">
+          <div class="project-section-heading heading-row">
+            <div><p class="section-index">06 / No-Show Recovery</p><h2 id="motioncare-no-show-title">RECOVER MISSED<br>APPOINTMENTS.</h2></div>
+            <p>A dedicated no-show workflow helps the clinic reconnect with patients and guide them toward rescheduling.</p>
+          </div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/MotionCare/no-show.png" data-lightbox-alt="MotionCare no-show recovery automation screenshot" data-lightbox-caption="MotionCare No-Show Recovery" aria-label="Open MotionCare no-show recovery screenshot in a larger view"><img src="../Image/MotionCare/no-show.png" alt="MotionCare no-show recovery automation screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>06</span> No-Show Recovery</figcaption></figure></div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-labelledby="motioncare-email-title">
+        <div class="container">
+          <div class="project-section-heading heading-row">
+            <div><p class="section-index">07 / Email Communication</p><h2 id="motioncare-email-title">CLEAR PATIENT<br>COMMUNICATION.</h2></div>
+            <p>A polished email template supports consistent clinic communication across appointment and follow-up workflows.</p>
+          </div>
+          <div class="project-gallery project-gallery-single"><figure class="gallery-card"><button class="gallery-trigger" type="button" data-lightbox-src="../Image/MotionCare/email-template.png" data-lightbox-alt="MotionCare patient email template screenshot" data-lightbox-caption="MotionCare Email Communication" aria-label="Open MotionCare email template screenshot in a larger view"><img src="../Image/MotionCare/email-template.png" alt="MotionCare patient email template screenshot" loading="lazy"><span class="view-hint" aria-hidden="true">View larger ↗</span></button><figcaption><span>07</span> Email Communication</figcaption></figure></div>
+        </div>
+      </section>
+    </div>
 
     <section class="project-return">
       <div class="container">
@@ -195,7 +314,7 @@
 
   <footer class="project-footer">
     <div class="container">
-      <span>Glow Haven Spa & Salon</span>
+      <span>Glow Haven / MotionCare</span>
       <span>GoHighLevel / CRM Automation</span>
     </div>
   </footer>

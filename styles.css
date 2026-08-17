@@ -266,13 +266,6 @@ button { color: inherit; font: inherit; }
 .project-node-copy strong { grid-column: 1 / -1; font: 700 clamp(1.65rem, 2.3vw, 2.15rem)/.94 var(--heading); letter-spacing: -.01em; text-transform: uppercase; }
 .project-node-copy small { color: var(--text-soft); font-size: .62rem; line-height: 1.45; }
 .project-node-copy b { align-self: end; color: var(--rose); font-size: .56rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-.zapier-node-slide { padding: 20px; background: radial-gradient(circle at 12% 15%, rgba(255, 79, 0, .13), transparent 36%), #0d0d10; }
-.zapier-node-brand { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.zapier-node-brand img { width: 96px; height: 30px; object-fit: contain; }
-.zapier-node-brand small { color: var(--text-soft); font-size: .5rem; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
-.zapier-node-flow { display: flex; align-items: center; gap: 6px; margin-top: 24px; }
-.zapier-node-flow i { display: grid; min-height: 42px; flex: 1; place-items: center; padding: 7px; border: 1px solid rgba(245, 241, 237, .13); border-radius: 7px; background: rgba(245, 241, 237, .05); color: var(--text); font-size: .5rem; font-style: normal; text-transform: uppercase; }
-.zapier-node-flow b { width: 12px; height: 1px; flex: none; background: rgba(255, 79, 0, .65); }
 .project-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 26px; }
 .project-card-grid .project-node { grid-area: auto; width: 100%; min-height: 610px; justify-self: stretch; padding: 16px; border-color: rgba(184, 92, 112, .25); border-radius: 24px 7px 24px 7px; background: linear-gradient(155deg, rgba(33, 25, 29, .72), rgba(13, 13, 15, .94) 48%); box-shadow: inset 0 1px 0 rgba(245, 241, 237, .035), 0 20px 50px rgba(0, 0, 0, .22); }
 .project-card-grid .project-node-visual { aspect-ratio: 4 / 3; border-color: rgba(184, 92, 112, .2); border-radius: 17px 5px 17px 5px; }
@@ -290,11 +283,6 @@ button { color: inherit; font: inherit; }
 .project-card-grid .project-node:focus-visible .project-node-copy > b { border-color: rgba(184, 92, 112, .5); color: #fffdfa; }
 .project-card-grid .project-node:hover .project-node-copy > b i,
 .project-card-grid .project-node:focus-visible .project-node-copy > b i { transform: translate(3px, -3px); }
-.ghl-concept-slide { flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 38%, rgba(146, 52, 71, .24), transparent 38%), linear-gradient(145deg, #27171c, #09090b 72%); text-align: center; }
-.ghl-concept-slide.is-active { display: flex; }
-.ghl-concept-slide span { position: relative; z-index: 1; color: var(--text); font: 800 clamp(2.6rem, 4vw, 4rem)/.9 var(--heading); letter-spacing: -.02em; text-transform: uppercase; }
-.ghl-concept-slide small { position: relative; z-index: 1; margin-top: 12px; color: var(--rose); font-size: .58rem; letter-spacing: .13em; text-transform: uppercase; }
-.ghl-concept-slide > i { position: absolute; width: 58%; aspect-ratio: 1; border: 1px solid rgba(245, 241, 237, .1); border-radius: 50%; box-shadow: 0 0 34px rgba(146, 52, 71, .09); }
 
 .skills { overflow: hidden; border-top: 1px solid var(--border); background: rgba(13, 13, 15, .93); }
 .skills-heading { align-items: flex-start; }

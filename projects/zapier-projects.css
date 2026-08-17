@@ -1,0 +1,197 @@
+.zapier-selector-section {
+  padding: 110px 0 96px;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(circle at 50% 0, rgba(146, 52, 71, .12), transparent 36%), var(--bg);
+}
+
+.zapier-selector-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 52px;
+}
+
+.zapier-selector-heading .eyebrow {
+  margin: 0;
+}
+
+.zapier-selector-heading h1 {
+  max-width: 760px;
+  margin: 0;
+  font: 800 clamp(3.8rem, 7vw, 7rem)/.8 var(--heading);
+  letter-spacing: -.03em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.zapier-project-selector {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.zapier-selector-card {
+  display: grid;
+  min-height: 480px;
+  grid-template-rows: auto auto auto 1fr auto;
+  align-items: start;
+  padding: clamp(26px, 3vw, 38px);
+  border: 1px solid rgba(184, 92, 112, .25);
+  border-radius: 24px 7px 24px 7px;
+  background: linear-gradient(150deg, rgba(33, 25, 29, .76), rgba(13, 13, 15, .95) 56%);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .3s ease, background .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+.zapier-selector-card:hover,
+.zapier-selector-card:focus-visible,
+.zapier-selector-card.is-selected {
+  border-color: rgba(184, 92, 112, .74);
+  background: linear-gradient(150deg, rgba(146, 52, 71, .21), rgba(13, 13, 15, .96) 62%);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .3), 0 0 32px rgba(146, 52, 71, .13);
+  transform: translateY(-4px);
+}
+
+.zapier-selector-number {
+  margin-bottom: 28px;
+  color: var(--rose);
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+}
+
+.zapier-selector-category {
+  margin-bottom: 14px;
+  color: var(--text-soft);
+  font-size: .56rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.zapier-selector-card strong {
+  margin-bottom: 20px;
+  font: 700 clamp(2rem, 3vw, 3.15rem)/.88 var(--heading);
+  letter-spacing: -.018em;
+  text-transform: uppercase;
+}
+
+.zapier-selector-card small {
+  color: var(--text-soft);
+  font-size: .66rem;
+  line-height: 1.6;
+}
+
+.zapier-selector-card b {
+  display: flex;
+  align-self: end;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(245, 241, 237, .12);
+  color: var(--text);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.zapier-selector-card b i {
+  color: var(--rose);
+  font-size: 1.1rem;
+  font-style: normal;
+  transition: transform .25s ease;
+}
+
+.zapier-selector-card:hover b i,
+.zapier-selector-card:focus-visible b i {
+  transform: translateX(5px);
+}
+
+.zapier-project-panel[hidden] {
+  display: none;
+}
+
+.zapier-project-panel {
+  animation: zapier-project-reveal .45s ease both;
+}
+
+.zapier-project-panel .gallery-trigger img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.zapier-project-panel .project-hero h1 {
+  max-width: 1120px;
+  font-size: clamp(4.5rem, 8.5vw, 8.5rem);
+}
+
+@keyframes zapier-project-reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1050px) {
+  .zapier-project-selector {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .zapier-selector-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 11px);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .zapier-selector-section {
+    padding: 84px 0 76px;
+  }
+
+  .zapier-selector-heading {
+    display: block;
+    margin-bottom: 38px;
+  }
+
+  .zapier-selector-heading h1 {
+    margin-top: 28px;
+    text-align: left;
+  }
+
+  .zapier-project-selector {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .zapier-selector-card,
+  .zapier-selector-card:last-child {
+    grid-column: auto;
+    width: 100%;
+    min-height: 420px;
+  }
+
+  .zapier-project-panel .project-hero h1 {
+    font-size: clamp(3.5rem, 17vw, 5.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zapier-selector-card,
+  .zapier-selector-card b i {
+    transition: none;
+  }
+
+  .zapier-selector-card:hover,
+  .zapier-selector-card:focus-visible,
+  .zapier-selector-card.is-selected {
+    transform: none;
+  }
+
+  .zapier-project-panel {
+    animation: none;
+  }
+}
