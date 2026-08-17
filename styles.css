@@ -645,11 +645,12 @@ html.reveal-enabled .reveal-item.is-visible {
   .skills .section-heading-row { margin-bottom: 38px; }
   .skills-heading-title,
   .skills-core { width: 100%; min-width: 0; max-width: none; }
-  .skills-heading-title h2 { max-width: 100%; font-size: clamp(2.95rem, 13.25vw, 4.7rem); line-height: .84; overflow-wrap: normal; word-break: normal; }
+  .skills-heading-title h2 { width: 100%; max-width: 100%; font-size: clamp(2.75rem, 12.8vw, 4.7rem); line-height: .84; overflow-wrap: normal; word-break: normal; }
+  .skills-heading-title h2 span { max-width: 100%; }
   .skills-heading .eyebrow { margin-bottom: 22px; }
   .skills-core { margin-top: 28px; }
-  .core-skills-list { gap: 8px; }
-  .core-skills-list li { max-width: 100%; padding: 9px 13px; font-size: .72rem; overflow-wrap: anywhere; white-space: normal; }
+  .core-skills-list { width: 100%; align-items: flex-start; gap: 9px; }
+  .core-skills-list li { min-width: 0; max-width: 100%; flex: 0 1 auto; padding: 9px 14px; font-size: .73rem; overflow-wrap: anywhere; white-space: normal; }
   .primary-automation-stack { margin-bottom: 46px; }
   .primary-stack-showcase { grid-template-columns: 1fr; }
   .primary-tool-item { min-height: 250px; padding: 26px 20px; }
