@@ -15,6 +15,18 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
+  <div class="ambient-background" data-ambient-background aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-lines">
+      <span class="ambient-line ambient-line-one"></span>
+      <span class="ambient-line ambient-line-two"></span>
+      <span class="ambient-line ambient-line-three"></span>
+    </div>
+    <span class="ambient-orb ambient-orb-one"></span>
+    <span class="ambient-orb ambient-orb-two"></span>
+    <span class="ambient-cursor-glow"></span>
+  </div>
+
   <header class="site-header" id="home">
     <div class="header-inner container">
       <a class="brand" href="#home" aria-label="Maricee Sedilla, back to home">
@@ -71,36 +83,61 @@
     <section class="skills section-pad" id="skills" aria-labelledby="skills-title">
       <div class="container skills-layout">
         <div class="section-heading section-heading-row skills-heading">
-          <div>
+          <div class="skills-heading-title">
             <p class="eyebrow"><span>Skills &amp; Tools</span></p>
             <h2 id="skills-title">SKILLS &amp; TOOLS</h2>
           </div>
-          <p>Tools and platforms I use to build systems, create content, manage projects, and support growing businesses.</p>
+          <div class="skills-core" aria-labelledby="core-skills-title">
+            <p class="core-skills-label" id="core-skills-title">CORE SKILLS</p>
+            <ul class="core-skills-list">
+              <li>GoHighLevel CRM &amp; Automation</li>
+              <li>Workflow Testing &amp; Troubleshooting</li>
+              <li>Video Editing</li>
+              <li>Graphic Design</li>
+              <li>Social Media Management</li>
+              <li>Content Planning</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="core-skills" aria-labelledby="core-skills-title">
-          <p class="core-skills-label" id="core-skills-title">Core Skills</p>
-          <ul class="core-skills-list">
-            <li>GoHighLevel CRM &amp; Automation</li>
-            <li>Video Editing</li>
-            <li>Graphic Design</li>
-            <li>Social Media Management</li>
-            <li>Content Planning</li>
-            <li>Workflow Testing &amp; Troubleshooting</li>
-          </ul>
-        </div>
+        <section class="primary-automation-stack" aria-labelledby="primary-stack-title">
+          <p class="skills-subheading" id="primary-stack-title">PRIMARY AUTOMATION STACK</p>
+          <div class="primary-stack-showcase">
+            <article class="primary-tool-item primary-tool-ghl" tabindex="0" aria-label="GoHighLevel, CRM and Automation">
+              <div class="primary-tool-logo primary-tool-logo-ghl">
+                <img src="assets/icons/gohighlevel.svg" alt="" loading="lazy" decoding="async">
+              </div>
+              <h3>GOHIGHLEVEL</h3>
+              <p>CRM &amp; Automation</p>
+            </article>
+            <article class="primary-tool-item primary-tool-zapier" tabindex="0" aria-label="Zapier, Workflow Automation">
+              <div class="primary-tool-logo primary-tool-logo-zapier">
+                <img src="assets/icons/zapier-wordmark-dark.png" alt="" loading="lazy" decoding="async">
+              </div>
+              <h3>ZAPIER</h3>
+              <p>Workflow Automation</p>
+            </article>
+            <article class="primary-tool-item primary-tool-make" tabindex="0" aria-label="Make, Visual Automation">
+              <div class="primary-tool-logo primary-tool-logo-make">
+                <img src="assets/icons/make.svg" alt="" loading="lazy" decoding="async">
+              </div>
+              <h3>MAKE</h3>
+              <p>Visual Automation</p>
+            </article>
+          </div>
+        </section>
 
-        <div class="tools-marquee" data-tool-marquee aria-label="Tools I use">
+        <p class="skills-subheading other-tools-heading" id="other-tools-title">OTHER TOOLS I WORK WITH</p>
+        <div class="tools-marquee" data-tool-marquee aria-labelledby="other-tools-title">
           <div class="tool-marquee-row" data-marquee-row>
             <div class="tool-marquee-track">
               <ul class="tool-marquee-group">
-                <li><img src="assets/icons/gohighlevel.svg" alt="" loading="lazy" decoding="async">GoHighLevel</li>
                 <li><img src="assets/icons/premiere-pro.svg" alt="" loading="lazy" decoding="async">Adobe Premiere Pro</li>
                 <li><img src="assets/icons/canva.svg" alt="" loading="lazy" decoding="async">Canva</li>
                 <li><img class="tool-icon-on-light" src="assets/icons/capcut.svg" alt="" loading="lazy" decoding="async">CapCut</li>
                 <li><img src="assets/icons/chatgpt.svg" alt="" loading="lazy" decoding="async">ChatGPT</li>
                 <li><img src="assets/icons/claude-ai.svg" alt="" loading="lazy" decoding="async">Claude AI</li>
-                <li data-category="AI-Assisted Web Development"><img src="assets/icons/codex.svg" alt="" loading="lazy" decoding="async">Codex<span class="sr-only"> — AI-Assisted Web Development</span></li>
+                <li><img src="assets/icons/codex.svg" alt="" loading="lazy" decoding="async">Codex</li>
                 <li><img src="assets/icons/github.svg" alt="" loading="lazy" decoding="async">GitHub</li>
                 <li><img src="assets/icons/meta-business-suite.svg" alt="" loading="lazy" decoding="async">Meta Business Suite</li>
               </ul>
@@ -129,77 +166,56 @@
         <div class="section-heading section-heading-row">
           <div>
             <p class="eyebrow"><span>01 / Selected Work</span></p>
-            <h2 id="projects-title">FEATURED PROJECTS.</h2>
+            <h2 id="projects-title">FEATURED PROJECTS</h2>
           </div>
-          <p>Purposeful work designed to make customer journeys and content feel effortless.</p>
+          <p>Selected systems, automations, and creative work.</p>
         </div>
 
-        <article class="featured-project">
-          <a class="project-card-link" href="./projects/ghl.html" aria-label="View the Glow Haven Spa and Salon project"></a>
-          <div class="project-visual glow-haven-slider" data-project-slider data-slider-interval="5000" aria-hidden="true">
-            <div class="project-slide is-active"><img src="Image/Glow-Haven/landing-page.png" alt=""></div>
-            <div class="project-slide"><img src="Image/Glow-Haven/booking-page.png" alt="" loading="lazy"></div>
-            <div class="project-slide"><img src="Image/Glow-Haven/pipeline.png" alt="" loading="lazy"></div>
-            <div class="project-slide"><img src="Image/Glow-Haven/workflow-overview.png" alt="" loading="lazy"></div>
-            <div class="project-slide"><img src="Image/Glow-Haven/email-template.png" alt="" loading="lazy"></div>
-            <span class="slider-dots"><i class="is-active"></i><i></i><i></i><i></i><i></i></span>
-          </div>
-          <div class="project-content">
-            <span class="featured-project-badge">Featured GHL Project</span>
-            <p class="project-type">GoHighLevel CRM &amp; Automation</p>
-            <h3>Glow Haven<br>Spa &amp; Salon</h3>
-            <p>Designed and built a complete customer journey for a salon and spa business using GoHighLevel. The system includes lead capture, online booking, appointment confirmation, email reminders, no-show recovery, review requests, and rebooking follow-ups.</p>
-            <ul class="feature-list" aria-label="Project features">
-              <li>Landing page</li>
-              <li>Inquiry form</li>
-              <li>Booking calendar</li>
-              <li>CRM pipeline</li>
-              <li>Seven automated workflows</li>
-              <li>Confirmation and reminder emails</li>
-              <li>Review request</li>
-              <li>Rebooking sequence</li>
-            </ul>
-            <div class="button-row">
-              <a class="button button-primary" href="./projects/ghl.html">View Case Study <span aria-hidden="true">↗</span></a>
-              <a class="button button-secondary" href="https://drive.google.com/file/d/1BEkgUocpaFqg0GrDTWSdNxrob_qtw77V/view?usp=sharing" target="_blank" rel="noopener noreferrer">Watch Walkthrough <span aria-hidden="true">▶</span></a>
-            </div>
-          </div>
-        </article>
+        <div class="project-card-grid" data-project-hub aria-label="Featured project categories">
+            <a class="project-node project-node-ghl" href="./projects/ghl.html" aria-label="Explore GoHighLevel projects" data-project-node>
+              <div class="project-node-visual" data-node-slider>
+                <span class="project-node-slide is-active"><img src="Image/Glow-Haven/landing-page.png" alt="Glow Haven landing page preview"></span>
+                <span class="project-node-slide"><img src="Image/Glow-Haven/booking-page.png" alt="Glow Haven booking page preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Glow-Haven/pipeline.png" alt="Glow Haven CRM pipeline preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Glow-Haven/workflow-overview.png" alt="Glow Haven automation workflow preview" loading="lazy"></span>
+                <span class="project-node-slide ghl-concept-slide"><span>MotionCare</span><small>Physiotherapy CRM System</small><i aria-hidden="true"></i></span>
+                <span class="project-node-dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i><i></i></span>
+              </div>
+              <span class="project-node-copy"><span class="project-node-category">CRM &amp; Automation</span><strong>GoHighLevel Projects</strong><small>CRM • Workflows • Funnels • Booking Systems</small><b>Explore Projects <i aria-hidden="true">↗</i></b></span>
+            </a>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <a class="project-card-link" href="./projects/video-editing.html" aria-label="View the Video Editing portfolio"></a>
-            <div class="card-art card-art-video" data-project-slider aria-hidden="true">
-              <div class="project-slide is-active"><img src="Image/Video-Editing/Health/health-video-01.png" alt=""></div>
-              <div class="project-slide"><img src="Image/Video-Editing/Health/health-video-02.png" alt="" loading="lazy"></div>
-              <div class="project-slide"><img src="Image/Video-Editing/Survival/survival-video-01.png" alt="" loading="lazy"></div>
-              <div class="project-slide"><img src="Image/Video-Editing/Survival/survival-video-02.png" alt="" loading="lazy"></div>
-              <span class="slider-dots"><i class="is-active"></i><i></i><i></i><i></i></span>
-            </div>
-            <div class="card-info"><span>Portfolio project</span><h3>Video Editing</h3><p>Short-form and long-form storytelling.</p><a class="project-card-button" href="./projects/video-editing.html">View Project <b aria-hidden="true">↗</b></a></div>
-          </article>
-          <article class="project-card">
-            <a class="project-card-link" href="./projects/graphic-design.html" aria-label="View the Graphic Design portfolio"></a>
-            <div class="card-art card-art-design" data-project-slider aria-hidden="true">
-              <div class="project-slide is-active"><img src="Image/Graphic-Design/social-post-01.png" alt=""></div>
-              <div class="project-slide"><img src="Image/Graphic-Design/youtube-thumbnail-01.png" alt="" loading="lazy"></div>
-              <div class="project-slide"><img src="Image/Graphic-Design/promo-graphic-01.png" alt="" loading="lazy"></div>
-              <div class="project-slide"><img src="Image/Graphic-Design/youtube-thumbnail-02.png" alt="" loading="lazy"></div>
-              <span class="slider-dots"><i class="is-active"></i><i></i><i></i><i></i></span>
-            </div>
-            <div class="card-info"><span>Portfolio project</span><h3>Graphic Design</h3><p>On-brand visuals made to connect.</p><a class="project-card-button" href="./projects/graphic-design.html">View Project <b aria-hidden="true">↗</b></a></div>
-          </article>
-          <article class="project-card">
-            <a class="project-card-link" href="./projects/social-media.html" aria-label="View the Social Media Management portfolio"></a>
-            <div class="card-art card-art-social" data-project-slider aria-hidden="true">
-              <div class="project-slide is-active"><img src="Image/Social-Media/content-calendar-01.png" alt=""></div>
-              <div class="project-slide"><img src="Image/Social-Media/content-calendar-02.png" alt="" loading="lazy"></div>
-              <div class="project-slide"><img src="Image/Social-Media/content-scheduled-01.png" alt="" loading="lazy"></div>
-              <div class="project-slide"><img src="Image/Social-Media/content-scheduled-02.png" alt="" loading="lazy"></div>
-              <span class="slider-dots"><i class="is-active"></i><i></i><i></i><i></i></span>
-            </div>
-            <div class="card-info"><span>Portfolio project</span><h3>Social Media Management</h3><p>Strategic content for consistent presence.</p><a class="project-card-button" href="./projects/social-media.html">View Project <b aria-hidden="true">↗</b></a></div>
-          </article>
+            <a class="project-node project-node-zapier" href="./projects/zapier.html" aria-label="Explore Zapier automation projects" data-project-node>
+              <div class="project-node-visual" data-node-slider>
+                <span class="project-node-slide zapier-node-slide is-active">
+                  <span class="zapier-node-brand"><img src="assets/icons/zapier-wordmark-dark.png" alt="Zapier"><small>Asana CRM Automation</small></span>
+                  <span class="zapier-node-flow" aria-hidden="true"><i>Lead</i><b></b><i>Format</i><b></b><i>Asana</i></span>
+                </span>
+                <span class="project-node-slide zapier-node-slide">
+                  <span class="zapier-node-brand"><img src="assets/icons/zapier-wordmark-dark.png" alt="Zapier"><small>Lead Enrichment</small></span>
+                  <span class="zapier-node-flow" aria-hidden="true"><i>Lead</i><b></b><i>Enrich</i><b></b><i>CRM</i></span>
+                </span>
+                <span class="project-node-slide zapier-node-slide">
+                  <span class="zapier-node-brand"><img src="assets/icons/zapier-wordmark-dark.png" alt="Zapier"><small>Personalized Email Automation</small></span>
+                  <span class="zapier-node-flow" aria-hidden="true"><i>CRM</i><b></b><i>Personalize</i><b></b><i>Email</i></span>
+                </span>
+                <span class="project-node-dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i></span>
+              </div>
+              <span class="project-node-copy"><span class="project-node-category">Workflow Automation</span><strong>Zapier Automation</strong><small>Lead Routing • CRM • Data • Outreach</small><b>Explore Projects <i aria-hidden="true">↗</i></b></span>
+            </a>
+
+            <a class="project-node project-node-creative" href="./projects/creative.html" aria-label="Explore creative and social media projects" data-project-node>
+              <div class="project-node-visual" data-node-slider>
+                <span class="project-node-slide is-active"><img src="Image/Video-Editing/Health/health-video-01.png" alt="Video editing project preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Video-Editing/Survival/survival-video-01.png" alt="Survival video editing project preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Graphic-Design/social-post-01.png" alt="Social media graphic design preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Graphic-Design/youtube-thumbnail-01.png" alt="Graphic design project preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Graphic-Design/promo-graphic-01.png" alt="Promotional design preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Social-Media/content-calendar-01.png" alt="Content calendar project preview" loading="lazy"></span>
+                <span class="project-node-slide"><img src="Image/Social-Media/content-scheduled-01.png" alt="Social media scheduling project preview" loading="lazy"></span>
+                <span class="project-node-dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+              <span class="project-node-copy"><span class="project-node-category">Creative Operations</span><strong>Creative &amp; Social Media</strong><small>Video • Design • Content • Publishing</small><b>Explore Projects <i aria-hidden="true">↗</i></b></span>
+            </a>
         </div>
       </div>
     </section>
