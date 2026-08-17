@@ -56,6 +56,69 @@ observedSections.forEach((section) => activeLinkObserver.observe(section));
 
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+const revealTargets = Array.from(document.querySelectorAll([
+  '.skills-heading',
+  '.primary-automation-stack',
+  '.other-tools-heading',
+  '.tools-marquee',
+  '.projects .section-heading-row',
+  '.project-node',
+  '.services .section-heading-row',
+  '.service-item',
+  '.contact-inner > .eyebrow',
+  '.contact h2',
+  '.contact-inner > p:not(.eyebrow)',
+  '.contact-links a'
+].join(',')));
+
+let revealObserver = null;
+
+function showAllRevealTargets() {
+  revealObserver?.disconnect();
+  revealTargets.forEach((target) => {
+    target.classList.remove('reveal-item', 'is-visible');
+    target.style.removeProperty('--reveal-delay');
+  });
+  document.documentElement.classList.remove('reveal-enabled');
+}
+
+function initializeScrollReveals() {
+  if (reducedMotionQuery.matches || !('IntersectionObserver' in window)) {
+    showAllRevealTargets();
+    return;
+  }
+
+  document.documentElement.classList.add('reveal-enabled');
+  revealTargets.forEach((target) => {
+    const isStaggeredCard = target.matches('.project-node, .service-item, .contact-links a');
+    const siblingIndex = isStaggeredCard ? Array.from(target.parentElement.children).indexOf(target) : 0;
+    target.style.setProperty('--reveal-delay', `${Math.max(0, siblingIndex) * 90}ms`);
+    target.classList.add('reveal-item');
+  });
+
+  revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const target = entry.target;
+      const delay = Number.parseInt(target.style.getPropertyValue('--reveal-delay'), 10) || 0;
+      target.classList.add('is-visible');
+      revealObserver.unobserve(target);
+      window.setTimeout(() => {
+        target.classList.remove('reveal-item', 'is-visible');
+        target.style.removeProperty('--reveal-delay');
+      }, 820 + delay);
+    });
+  }, { rootMargin: '0px 0px -10%', threshold: .12 });
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+}
+
+initializeScrollReveals();
+reducedMotionQuery.addEventListener('change', () => {
+  if (reducedMotionQuery.matches) showAllRevealTargets();
+  else initializeScrollReveals();
+});
+
 const projectHub = document.querySelector('[data-project-hub]');
 
 if (projectHub) {
@@ -139,9 +202,16 @@ const ambientBackground = document.querySelector('[data-ambient-background]');
 
 if (ambientBackground) {
   const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 761px)');
+  const heroSection = document.querySelector('.hero');
   let pointerFrame = 0;
 
-  const hidePointerGlow = () => ambientBackground.classList.remove('has-pointer');
+  const hidePointerGlow = () => {
+    ambientBackground.classList.remove('has-pointer');
+    heroSection?.style.setProperty('--hero-wave-x', '0px');
+    heroSection?.style.setProperty('--hero-wave-y', '0px');
+    heroSection?.style.setProperty('--portrait-shift-x', '0px');
+    heroSection?.style.setProperty('--portrait-shift-y', '0px');
+  };
 
   window.addEventListener('pointermove', (event) => {
     if (!finePointerQuery.matches || reducedMotionQuery.matches) {
@@ -153,6 +223,14 @@ if (ambientBackground) {
     pointerFrame = window.requestAnimationFrame(() => {
       document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
       document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
+      if (heroSection) {
+        const horizontalPosition = (event.clientX / window.innerWidth) - .5;
+        const verticalPosition = (event.clientY / window.innerHeight) - .5;
+        heroSection.style.setProperty('--hero-wave-x', `${horizontalPosition * 18}px`);
+        heroSection.style.setProperty('--hero-wave-y', `${verticalPosition * 12}px`);
+        heroSection.style.setProperty('--portrait-shift-x', `${horizontalPosition * -7}px`);
+        heroSection.style.setProperty('--portrait-shift-y', `${verticalPosition * -5}px`);
+      }
       ambientBackground.classList.add('has-pointer');
     });
   }, { passive: true });
