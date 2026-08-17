@@ -612,7 +612,7 @@ html.reveal-enabled .reveal-item.is-visible {
   .menu-toggle { display: block; z-index: 2; margin-left: auto; }
   .menu-toggle[aria-expanded="true"] > span:nth-of-type(2) { transform: translateY(3.5px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] > span:nth-of-type(3) { transform: translateY(-3.5px) rotate(-45deg); }
-  .primary-nav { position: fixed; inset: var(--header-height) 0 auto; display: grid; padding: 18px 24px 28px; border-bottom: 1px solid var(--border); background: rgba(7, 7, 6, .98); opacity: 0; pointer-events: none; transform: translateY(-12px); transition: opacity .2s ease, transform .2s ease; }
+  .primary-nav { position: fixed; inset: var(--header-height) 0 auto; display: grid; padding: 18px 24px 28px; border-bottom: 1px solid var(--border); background: rgba(5, 5, 5, .98); opacity: 0; pointer-events: none; transform: translateY(-12px); transition: opacity .2s ease, transform .2s ease; }
   .primary-nav.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
   .primary-nav a { padding: 12px 0; font: 700 1.7rem/1 var(--heading); }
   .hero { padding-top: 66px; }
